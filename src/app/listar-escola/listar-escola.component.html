@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      <a class="btn btn-outline-danger" [routerLink]="['/editar',-1]">Incluir Escola</a>
+
+      <table class="table border-danger">
+        <thead class="thead bg-danger">
+          <tr class="text-white">
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Matriculados</th>
+            <th scope="col">Professores</th>
+            <th scope="col">Lab. Informática</th>
+            <th scope="col">Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let e of escolas, let i = index">
+            <td scope="row">{{i+1}}</td>
+            <td>{{e.nome}}</td>
+            <td>{{e.matriculados}}</td>
+            <td>{{e.professores}}</td>
+            <td>{{e.labinformatica | simNao }}</td>
+            <td>
+              <a class="btn btn-sm btn-outline-danger" [routerLink]="['/editar',e.id]">
+                <i class="fa fa-search"></i>
+              </a>
+              <button class="btn btn-sm btn-outline-danger" (click)="apagar(e.id)">
+                  <i class="fa fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>

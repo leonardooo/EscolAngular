@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="card border-danger">
+      <div class="card-header bg-danger text-white">
+        Editar Escola
+      </div>
+      <div class="card-body border-danger">
+
+
+    <form [formGroup]="form">
+    <div class="row">
+      <div class="col col-md-3">
+          <label class="text-danger">Nome da escola: </label>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control border-danger" formControlName="nome">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-md-3">
+          <label class="text-danger">Número de alunos: </label>
+      </div>
+      <div class="col">
+        <input type="number" class="form-control border-danger" formControlName="matriculados">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-md-3">
+          <label class="text-danger">Número de professores: </label>
+      </div>
+      <div class="col">
+        <input type="number" class="form-control border-danger" formControlName="professores">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-md-3">
+          <label class="text-danger">Tem laboratório de informática? </label>
+      </div>
+      <div class="col">
+        <input type="checkbox" formControlName="labinfo">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <button class="btn btn-outline-danger" (click)="salvar()">Salvar</button>
+      </div>
+    </div>
+
+
+    </form>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col col-md-12">
+      <a class="btn btn-outline-danger" [routerLink]="['/listar']">Voltar</a>
+    </div>
+  </div>
+</div>

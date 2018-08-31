@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="card border-danger">
+    <div class="card-header bg-danger text-white">
+        Login
+    </div>
+    <div class="card-body border-danger">
+
+      <div class="row">
+        <div class="col col-md-1">
+          <label>Usuário: </label>
+        </div>
+        <div class="col col-md-11">
+          <input type="text" ngModel #usuario>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-md-1">
+          <label>Senha: </label>
+        </div>
+        <div class="col col-md-11">
+          <input type="password" ngModel #senha>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-outline-danger" (click)="login(usuario.value, senha.value)">
+            LOGIN
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
